@@ -238,7 +238,7 @@ hr {
   gap: 1rem;
 }
 
-/* ------------- Produtcs Section End--------------- */
+/* ------------- Produts Section End--------------- */
 
 /* --------------advertisement comment section --------------- */
 
@@ -267,6 +267,10 @@ hr {
   padding: 6rem 4rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .comment-section img {
   border-radius: 20px;
   width: 90%;
@@ -290,7 +294,7 @@ hr {
 }
 
 .comment-right h1 {
-  font-size: clamp(1.5rem, 6vw, 4rem);
+  font-size: clamp(1rem, 5vw, 4rem);
 
   font-weight: 500;
 }
@@ -346,12 +350,12 @@ footer {
   flex-direction: column;
   gap: 3rem;
 }
-.socials-img a img {
+.socials-icons a img {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
 }
-.socials-img {
+.socials-icons {
   display: flex;
   gap: 1.5rem;
 }
@@ -371,6 +375,10 @@ footer {
   font-weight: 500;
 }
 
+.hidden-text {
+  display: none;
+}
+
 .footer-info-right {
   display: flex;
   flex-direction: column;
@@ -381,7 +389,7 @@ footer {
   padding: 0.75rem 1rem;
   font-size: 1rem;
   border: 1px solid #ccc;
-
+  margin-bottom: 1rem;
   width: 250px;
 }
 
@@ -394,7 +402,7 @@ footer {
 .order-3 {
   order: 3;
 }
-
+/* -----------------------media---------------- */
 @media (max-width: 768px) {
   .header-navigation {
     display: none;
@@ -431,8 +439,25 @@ footer {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .comment-right h3 {
+    display: none;
+  }
+
+  .comment-left h3 {
+    display: block;
+    color: white;
+    padding-bottom: 2rem;
+  }
+
+  .comment-left {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
   .comment-left img {
     height: 300px;
+    width: 100%;
   }
 
   .footer-photos {
@@ -441,14 +466,34 @@ footer {
   }
 
   .footer-info {
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: grid;
+
+    gap: 2rem;
+
+    grid-template-columns: 1fr;
   }
 
-  .footer-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  .footer-info-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-info-left h4 {
+    display: none;
+  }
+
+  .socials-icons {
+    justify-content: right;
+  }
+  .footer-info-middle h4 {
+    display: inline-block;
+    align-self: end;
+    text-align: right;
+  }
+
+  .footer-info-middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .footer-info-right button {
